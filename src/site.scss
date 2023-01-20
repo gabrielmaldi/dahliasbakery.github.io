@@ -1,0 +1,62 @@
+@use "sass:math";
+
+@import "reset";
+
+$imagesCount: 0;
+
+body {
+  background: #020520;
+  // perspective: 500px;
+  overflow-x: hidden;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.title {
+  position: fixed;
+  width: 100%;
+  top: 40px;
+
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+  text-align: center;
+  color: #e8e6e3;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+figure {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  @for $i from 1 through ($imagesCount + 1) {
+    &:nth-child(#{$i}) {
+      img {
+        $rotation: math.div($i - 1, $imagesCount - 1) - 0.5;
+        transform: scale(0.6) rotate($rotation * 25deg);
+      }
+    }
+  }
+
+  img {
+    width: 100vmin;
+    height: 100vmin;
+    border-radius: 3px;
+  }
+}

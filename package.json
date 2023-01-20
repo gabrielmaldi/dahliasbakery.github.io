@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "dahliasbakery.github.io",
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "engines": {
+    "node": "^19.4.0",
+    "npm": "^9.2.0"
+  },
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3",
+    "pug": "^3.0.2",
+    "sass": "^1.57.1"
+  }
+}

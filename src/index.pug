@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, viewport-fit=cover")
+
+    title="Dahlia Bakery"
+
+    link(rel="stylesheet", href="site.css")
+  body
+    div.title
+      h1 Dahlia Bakery
+      h2 PASTELERÍA AUDAZ Y DIFERENTE
+
+    each image in images
+      figure
+        a(href=image.url)
+          img(src="images/" + image.name, width=1000, height=1000)
